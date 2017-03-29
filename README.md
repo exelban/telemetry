@@ -11,6 +11,7 @@ Next copy file ```raspberry.py``` to your raspberry Pi. Dont forget to change ar
 For compile arduino code you must to download and install [SimpleTimer Library](http://playground.arduino.cc/Code/SimpleTimer), 
 because we use it for speed calculation.
 Next you can upload file ```arduino.ino``` to you arduino board.
+Also i recommend to install Arduino IDE to raspberry Pi. You can do it by ```apt install arduino ```
 
 ## Usage
 I use Python 3.5 so you must to compile this version (or you can change code to oldest version).
