@@ -20,6 +20,9 @@ Also you must to change all sensors ports in ```arduino.ino```.
 
 
 ## Structure
+![](https://s3.eu-central-1.amazonaws.com/serhiy/Github_repo/Zrzut+ekranu+2017-03-29+o+21.26.37.png) 
+
+Polish version (there was used radiomodem to transmit all data to computer).
 ![](https://s3.eu-central-1.amazonaws.com/serhiy/Github_repo/12970154_1156605494389480_584957392_o.jpg) 
 
 ## Licence
