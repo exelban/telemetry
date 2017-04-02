@@ -36,12 +36,12 @@ void sendData() {
 }
 
 void get_temperature1() {
-  temperatura1 = analogRead(A4);
+  temperatura1 = analogRead(A0);
   R = ((10240000 / temperatura1) - 10000);
   temperatura1 = (1 / (0.001129148 + (0.000234125 * (log(R))) + (0.0000000876741 * (log(R) * log(R) * log(R))))) - 273.15;
 }
 void get_temperature2() {
-  temperatura2 = analogRead(A3);
+  temperatura2 = analogRead(A1);
   R = ((10240000 / temperatura2) - 10000);
   temperatura2 = (1 / (0.001129148 + (0.000234125 * (log(R))) + (0.0000000876741 * (log(R) * log(R) * log(R))))) - 273.15;
 }
@@ -51,10 +51,10 @@ void get_temperature3() {
   temperatura3 = (1 / (0.001129148 + (0.000234125 * (log(R))) + (0.0000000876741 * (log(R) * log(R) * log(R))))) - 273.15;
 }
 void get_U() {
-  U = ((analogRead(A1) - 515) * 0.5818);
+  U = ((analogRead(A5) - 515) * 0.5818);
 }
 void get_I() {
-  I = (((int(analogRead(A0)) * 0.1) * 55) / 1024) * 10;
+  I = (((int(analogRead(A3)) * 0.1) * 55) / 1024) * 10;
 }
 void get_speed() {
   if (speed_value == false) {
