@@ -35,6 +35,18 @@ I recommend to install Arduino IDE to raspberry Pi. You can do it by print ```ap
 
 After you connected all sensors to arduino board and arduino board to raspberry Pi you can run ```python3 raspberry.py``` on your raspberry Pi.
 
+## Errors
+### Please check arduino port!
+It means that script can not connect to arduino on this port. Probably you forget to change arduino port.
+If you your arduino connect to write port, but message still appear, plese create issue.
+
+### Please check GPS port!
+It means that script can not connect to GPS module on this port. Probably you forget to change GPS module port.
+If you your GPS module connect to write port, but message still appear, plese create issue.
+
+### Please check your GPS module.
+This error can appear if your GPS module use other baud rate (not 9600). Please check your GPS module boud rate and just change GPS boud rate on line 24: ```self.gps_module = serial.Serial(GPS_port, 9600)```.
+
 ## Structure
 ![](https://s3.eu-central-1.amazonaws.com/serhiy/Github_repo/Zrzut+ekranu+2017-03-29+o+21.26.37.png) 
 
