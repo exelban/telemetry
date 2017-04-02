@@ -21,12 +21,15 @@ GPS_port = '/dev/ttyAMA0'
 arduino_port = '/dev/ttyUSB1'
 ```
 
+**If you dont use GPS, just leave ```GPS_port``` empty.**
+
 ### Arduino
 For compile arduino code you must to download and install [SimpleTimer Library](http://playground.arduino.cc/Code/SimpleTimer), because we use it for speed calculation.
 
 If you connected sensors to different port on arduino just change it in ```arduino.ino```.
-Next you can upload file ```arduino.ino``` to you arduino board.
-Also i recommend to install Arduino IDE to raspberry Pi. You can do it by print ```apt install arduino ``` in terminal.
+Next upload file ```arduino.ino``` to you arduino board.
+
+I recommend to install Arduino IDE to raspberry Pi. You can do it by print ```apt install arduino ``` in terminal.
 
 **Dont worry if you have different sensors or use your own arduino code. Script on Raspberry Pi justt add all received data from adruino to final array.**
 
