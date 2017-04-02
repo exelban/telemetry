@@ -86,10 +86,10 @@ date = datetime.datetime.now().strftime("%H:%M:%S:%f")
 ```
 
 ## Structure
-![](https://s3.eu-central-1.amazonaws.com/serhiy/Github_repo/Zrzut+ekranu+2017-03-29+o+21.26.37.png) 
+![](https://s3.eu-central-1.amazonaws.com/serhiy/Github_repo/telemetry_schemat_1.png) 
 
-Polish version (there was used radiomodem to transmit all data to computer).
-![](https://s3.eu-central-1.amazonaws.com/serhiy/Github_repo/12970154_1156605494389480_584957392_o.jpg) 
+Block version:
+![](https://s3.eu-central-1.amazonaws.com/serhiy/Github_repo/telemetry_schemat_2.png) 
 
 ## Licence
 [GNU Affero General Public License](https://github.com/exelban/telemetry/blob/master/LICENSE)
