@@ -47,14 +47,14 @@ If you your GPS module connect to write port, but message still appear, plese cr
 ### Please check your GPS module.
 This error can appear if your GPS module use other baud rate (not 9600). Please check your GPS module boud rate and just change GPS boud rate on line 24: ```self.gps_module = serial.Serial(GPS_port, 9600)```.
 
-## Data format
+## Data format (Array)
 Default data format is ```[adruino, [gps], time]```.
 If you dont have GPS module data format will be ```[adruino, time]```.
 
-### Arduino
+### Arduino (String)
 Script split (```","```) received string from arduino.
 
-### GPS
+### GPS (Array)
 Script collect next data from GPS:
   - Latitude (lat);
   - Longitude (lon);
@@ -65,6 +65,10 @@ Script collect next data from GPS:
   
 Data format: ```[lat, lon, V1, V2, s, alt]```
 You can remove some parameters if you dont need on line 111: ```return [self.lat, self.lon, self.speed, self.speed_gps, self.satelites, self.altitude]```.
+
+### Time (String)
+Time format: ```H:M:S:MS```.
+You can change time format if you need on line 132: ```date = datetime.datetime.now().strftime("%H:%M:%S:%f")```
 
 ## Structure
 ![](https://s3.eu-central-1.amazonaws.com/serhiy/Github_repo/Zrzut+ekranu+2017-03-29+o+21.26.37.png) 
