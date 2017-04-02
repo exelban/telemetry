@@ -45,9 +45,12 @@ It means that script can not connect to GPS module on this port. Probably you fo
 If you your GPS module connect to write port, but message still appear, plese create issue.
 
 ### Please check your GPS module.
-This error can appear if your GPS module use other baud rate (not 9600). Please check your GPS module boud rate and just change GPS boud rate on line 24: ```self.gps_module = serial.Serial(GPS_port, 9600)```.
+This error can appear if your GPS module use other baud rate (not 9600). Please check your GPS module boud rate and just change GPS boud rate on line 24: 
+```python
+self.gps_module = serial.Serial(GPS_port, 9600)
+```
 
-## Data format (Array)
+## Data format
 Default data format is ```[adruino, [gps], time]```.
 If you dont have GPS module data format will be ```[adruino, time]```.
 
@@ -64,11 +67,23 @@ Script collect next data from GPS:
   - Altitude (alt).
   
 Data format: ```[lat, lon, V1, V2, s, alt]```
-You can remove some parameters if you dont need on line 111: ```return [self.lat, self.lon, self.speed, self.speed_gps, self.satelites, self.altitude]```.
+You can remove some parameters if you dont need on line 111: 
+```python
+return [self.lat, self.lon, self.speed, self.speed_gps, self.satelites, self.altitude]
+```
 
 ### Time (String)
 Time format: ```H:M:S:MS```.
-You can change time format if you need on line 132: ```date = datetime.datetime.now().strftime("%H:%M:%S:%f")```
+You can change time format if you need on line 132: 
+```python
+date = datetime.datetime.now().strftime("%H:%M:%S:%f")
+```
+
+### Example:
+```python
+['35', '31', '0', '-2.33', '49.63', '0.00', [52.2297700, 21.0117800, 0.00, 0.00, 7, 137], '17:22:53:208957']
+[               arduino                   , [.   lat.  ,     lon.  ,  V1 ,  V2 , s, alt],        TIME      ]
+```
 
 ## Structure
 ![](https://s3.eu-central-1.amazonaws.com/serhiy/Github_repo/Zrzut+ekranu+2017-03-29+o+21.26.37.png) 
